@@ -4,6 +4,9 @@ import edu.pe.cibertec.infracciones.dto.PagoResponseDTO;
 import java.util.List;
 
 public interface IPagoService {
-    PagoResponseDTO procesarPago(Long multaId);
+   // PagoResponseDTO procesarPago(Long multaId);
     List<PagoResponseDTO> obtenerPagosPorInfractor(Long infractorId);
+
+    //pregunta 3:
+    void procesarPago(Long multaId);
 }

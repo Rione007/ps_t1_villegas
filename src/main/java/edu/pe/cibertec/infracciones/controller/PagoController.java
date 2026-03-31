@@ -15,8 +15,9 @@ public class PagoController {
     private final IPagoService pagoService;
 
     @PostMapping("/{multaId}")
-    public ResponseEntity<PagoResponseDTO> procesarPago(@PathVariable Long multaId) {
-        return ResponseEntity.ok(pagoService.procesarPago(multaId));
+    public ResponseEntity<Void> procesarPago(@PathVariable Long multaId) {
+        pagoService.procesarPago(multaId);
+        return ResponseEntity.ok().build();
     }
 
     @GetMapping("/infractor/{infractorId}")

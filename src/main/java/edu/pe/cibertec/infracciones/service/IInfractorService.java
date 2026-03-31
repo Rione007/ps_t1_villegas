@@ -10,4 +10,8 @@ public interface IInfractorService {
     List<InfractorResponseDTO> obtenerTodos();
     void asignarVehiculo(Long infractorId, Long vehiculoId);
 
+    // pregnta 1
+    void verificarBloqueo(Long infractorId);
+
+
 }
